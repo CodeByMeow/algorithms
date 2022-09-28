@@ -1,7 +1,7 @@
 /**
  * Input: array number need sort
  * Output: array sorted
- * Time complexity: O(n²)
+ * Time complexity worst case: O(n²)
  * Description: After every loop, one element in array was sorted.
  *             The algorithm compares 2 adjacent element and swap them if conditions to be true (array ascending)
  */
