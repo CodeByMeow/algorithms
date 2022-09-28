@@ -8,6 +8,7 @@
  */
 
 function interchangeSortAlgorithms(array) {
+  if (array.length < 2) return array;
   for (let i = 0; i < array.length - 1; i++) {
     for (let j = i + 1; j < array.length; j++) {
       if (array[j] < array[i]) {

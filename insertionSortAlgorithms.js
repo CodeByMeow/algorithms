@@ -8,6 +8,7 @@
  *              Move the greater elements to once position up to make space for swapped element.
  */
 function insertionSortAlgorithms(array) {
+  if (array.length < 2) return array;
   for (let i = 1; i < array.length; i++) {
     for (let j = i; j >= 0; j--) {
       if (array[j - 1] > array[j]) {

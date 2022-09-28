@@ -8,6 +8,7 @@
  *              At the end of each compares loop, swap the "min" element and current posstion element.
  */
 function selectionSortAlgorithms(array) {
+  if (array.length < 2) return array;
   for (let i = 0; i < array.length - 1; i++) {
     let min = i;
     for (let j = i + 1; j < array.length; j++) {
