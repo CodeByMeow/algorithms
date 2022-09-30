@@ -3,26 +3,22 @@
  * output: array sorted
  * Time complexity worst case: O(log n)
  * description: Pick a element as a pivot.
- *              Partition array to 2 array has elements smaller on left pivot and greater on right pivot.
+ *              Partition array to 2 array has elements smaller (smaller pivot) to left of pivot and greater to right of pivot.
  *              Recursion ultil left and right array only have one element.
  */
 function quickSort(array) {
   if (array.length < 2) return array;
-  const pivotIndex = array.length - 1;
-  const pivot = array[pivotIndex];
+  const pivot = array[array.length - 1];
 
   const left = [];
   const right = [];
-  let currentItem;
-  for (let i = 0; i < pivotIndex; i++) {
-    currentItem = array[i];
-    if (currentItem < pivot) {
-      left.push(currentItem);
+  for (let i = 0; i < array.length - 1; i++) {
+    if (array[i] < pivot) {
+      left.push(array[i]);
     } else {
-      right.push(currentItem);
+      right.push(array[i]);
     }
   }
-  console.log({ left, pivot, right });
 
   return [...quickSort(left), pivot, ...quickSort(right)];
 }
@@ -34,4 +30,4 @@ const array5 = [8, 3, 5, 1, 4, 4, 2];
 const array6 = [8, 8, 3, 5, 5, 1, 4, 2];
 const array7 = [9, 9, 9, 9, 1, 1, 1, 1];
 
-console.log(quickSort(array5));
+console.log(quickSort(array4));
