@@ -7,7 +7,7 @@
  *              If the "min" element is greater, set min = current position.
  *              At the end of each compares loop, swap the "min" element and current posstion element.
  */
-function selectionSortAlgorithms(array) {
+function selectionSortAlgorithm(array) {
   if (array.length < 2) return array;
   for (let i = 0; i < array.length - 1; i++) {
     let min = i;
@@ -27,4 +27,4 @@ const array4 = [9, 8, 7, 6, 5, 4, 3, 2, 1];
 const array5 = [8, 3, 5, 1, 4, 2];
 const array6 = [8, 8, 3, 5, 5, 1, 4, 2];
 
-console.log(selectionSortAlgorithms(array4));
+console.log(selectionSortAlgorithm(array4));
